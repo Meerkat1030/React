@@ -2,6 +2,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
+import React from 'react';
 
 function App() {
     let subject = '서면 맛집 추천';
@@ -107,11 +108,25 @@ function App() {
             {/*        )*/}
             {/*    })}*/}
             {/*</div>*/}
+            <Modal2 param='yello'></Modal2>
         </div>
     );
 }
 
-cl
+class Modal2 extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            name : 'Lee',
+            age : 20
+        }
+    }
+    render() {
+        return(
+            <div>hello class {this.props.param}</div>
+        )
+    }
+}
 
 function Modal(props) {
     return (
