@@ -73,6 +73,14 @@ function App() {
                                 {like[index]}
                             </h4>
                             <p>3월 4일 발행</p>
+                            <button onClick={()=>{
+                                let copy = [...sub];
+                                copy.splice(index, 1);
+                                setSub(copy);
+                                let copylike = [...like];
+                                copylike.splice(index, 1);
+                                setLike(copylike);
+                            }}>삭제</button>
                         </div>
                     )
                 })
@@ -102,6 +110,8 @@ function App() {
         </div>
     );
 }
+
+cl
 
 function Modal(props) {
     return (
